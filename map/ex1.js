@@ -18,10 +18,11 @@ En sortie: [
   'Tofu contains 4 characters',
   'Mayonnaise contains 10 characters'
 ]
-
  */
 
-function getStringsLength(strings) {
+const getStringsLength = (string) => {
+  const map1 = string.map(x => x + " contains " + x.length + " characters")
+  return map1
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

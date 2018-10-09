@@ -51,9 +51,20 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 ]
 */
 
-function getCirclesProperties(radiuses) {
+
+const getCirco = (num) => {
+  return (2 * Math.PI * num).toFixed(3)
 }
 
+const getDiam = (num) => {
+  return (Math.PI * num * num ).toFixed(3)
+}
+
+const getCirclesProperties = (radiuses) => {
+  const objs = []
+  const obj = radiuses.map(x => objs.push({radius:x,circumference:getCirco(x),surface:getDiam(x)}))
+  return objs
+}
 
 
 // Ne pas modifier l'export

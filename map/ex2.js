@@ -42,9 +42,11 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
-}
 
+function getFoodCategories(foods) {
+  const map2 = foods.map(x => ((x.isVegetarian == true) ? x.food +' is suitable for vegetarians' : x.food +' is not suitable for vegetarians') )
+  return map2
+}
 
 
 // Ne pas modifier l'export

@@ -60,9 +60,9 @@ En sortie:
  */
 
 function getMoviesFreshness(movies) {
+  movies.map(x => ((x.rating < 60) ? x.label = "rotten": ((x.rating >= 60 && x.rating <= 75) ? x.label = "fresh" : x.label ="certified fresh"))) 
+  return movies
 }
-
-
 
 // Ne pas modifier l'export
 module.exports = getMoviesFreshness;
